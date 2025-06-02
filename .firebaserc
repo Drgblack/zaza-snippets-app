@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "zaza-snippet"
+  },
+  "targets": {
+    "zaza-snippet": {
+      "hosting": {
+        "zaza-snippet": [
+          "zaza-snippet"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}

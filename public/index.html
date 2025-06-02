@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Zaza Comment Spinner</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="container">
+    <h1>Zaza Comment Spinner</h1>
+
+    <label for="prompt">Prompt:</label>
+    <textarea id="prompt" placeholder="Write your prompt here..."></textarea>
+
+    <div class="controls">
+      <label id="presetsLabel" for="preset">Prompt presets (optional)</label>
+      <select id="preset">
+        <option value="">-- Choose a preset --</option>
+        <option value="Write a report comment for a student showing improvement.">Improvement</option>
+        <option value="Write a report comment for a high-achieving student.">Exceeds Expectations</option>
+        <option value="Write a report comment for a student who needs support.">Needs Improvement</option>
+      </select>
+
+      <label id="languageLabel" for="language">Language</label>
+      <select id="language" onchange="updateLanguage()">
+        <option value="en">English</option>
+        <option value="it">Italiano</option>
+        <option value="de">German</option>
+        <option value="es">Spanish</option>
+        <option value="fr">French</option>
+      </select>
+    </div>
+
+    <button id="generateBtn" onclick="generate()">Generate Comment</button>
+    <button id="regenerateBtn" onclick="regenerate()">🔄 Regenerate</button>
+    <button id="copyBtn" onclick="copyComment()">📋 Copy</button>
+
+    <div class="output">
+      <h3 id="resultLabel">Generated Comment:</h3>
+      <p id="result">...</p>
+    </div>
+
+    <div class="history">
+      <h3>History:</h3>
+      <ul id="history"></ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
