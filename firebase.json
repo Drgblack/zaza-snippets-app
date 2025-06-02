@@ -5,6 +5,12 @@
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "/classic",
+        "destination": "/classic/index.html"
+      }
     ]
   },
   "functions": {
